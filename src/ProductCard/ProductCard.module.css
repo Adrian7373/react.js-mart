@@ -1,0 +1,33 @@
+.card {
+    border: 1px solid;
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.productImage {
+    width: 100%;
+    height: 328px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.namePrice {
+    background-color: antiquewhite;
+    padding: 10px;
+    height: 118px;
+    max-height: 118px;
+    text-align: justify;
+    border-radius: 0 0 3 3;
+}
+
+.productPrice {
+    margin: 0;
+}
+
+.productTitle {
+    margin: 0;
+}
