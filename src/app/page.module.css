@@ -1,5 +1,13 @@
 .cardDiv {
     width: fit-content;
+    background-color: #1E1E1E;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+.cardDiv:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .productsDiv {
@@ -13,6 +21,6 @@
 }
 
 .cartDiv {
-    width: 20%;
+    width: 15%;
     border: 1px solid red;
 }

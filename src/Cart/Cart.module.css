@@ -1,6 +1,9 @@
 .cart {
-    border: 1px solid;
+    background-color: #a3a3a3;
     width: 22%;
+    height: 720px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .cartItem img {
@@ -34,4 +37,27 @@
 
 .itemQuantity {
     margin: 0px 3px 0px 3px;
+}
+
+.itemList {
+    background-color: #959595;
+    height: 530px;
+    overflow: scroll;
+}
+
+.checkoutButton {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 40px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: #ee4d2d;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+}
+
+.checkoutButton:hover {
+    background-color: #f76c50;
 }

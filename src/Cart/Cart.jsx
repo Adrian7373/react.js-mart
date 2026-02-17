@@ -32,7 +32,8 @@ export default function Cart({ cartItems, onUpdateQty, total }) {
 
                 )}
             <div className={styles.footer}>
-                <h3>Total: {total.toFixed(2)}</h3>
+                <h3>Total: ${total.toFixed(2)}</h3>
+                <button className={styles.checkoutButton}>Checkout</button>
             </div>
 
         </div>

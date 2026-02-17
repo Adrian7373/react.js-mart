@@ -9,7 +9,7 @@ export default function ProductCard({ product, onAdd }) {
             <div className={styles.namePrice}>
                 <p className={styles.productTitle}>{product.title}</p>
                 <p className={styles.productPrice}>${product.price}</p>
-                <button className="addToCartButton" onClick={() => onAdd(product)}>Add to Cart</button>
+                <button className={styles.addToCartButton} onClick={() => onAdd(product)}>Add to Cart</button>
             </div>
         </div>
     );

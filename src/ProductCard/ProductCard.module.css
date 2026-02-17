@@ -1,5 +1,4 @@
 .card {
-    border: 1px solid;
     width: 350px;
     height: 450px;
     display: flex;
@@ -8,23 +7,28 @@
     border-radius: 5px;
 }
 
-.productImage {
+.productImage img {
     width: 100%;
     height: 328px;
     flex-shrink: 0;
     margin: 0 auto;
-}
-
-.productImage img {
     object-fit: contain;
+    background-color: rgba(255, 255, 255, 0.689);
+    border-radius: 3px;
 }
 
 .namePrice {
+    display: flex;
     padding: 10px;
+    height: 98px;
     text-align: justify;
     flex-shrink: 0;
     border-radius: 0 0 3 3;
     overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
 }
 
 .productPrice {
@@ -32,5 +36,21 @@
 }
 
 .productTitle {
+    width: 100%;
     margin: 0;
+}
+
+.addToCartButton {
+    width: 120px;
+    height: 32px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: #ff5837;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.962);
+}
+
+.addToCartButton:hover {
+    background-color: #ffa391;
+    color: black;
 }
