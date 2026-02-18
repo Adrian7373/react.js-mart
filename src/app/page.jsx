@@ -8,6 +8,7 @@ import styles from "./page.module.css";
 export default function Home() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -17,6 +18,8 @@ export default function Home() {
         setProducts(data);
       } catch (err) {
         console.log("error");
+      } finally {
+        setLoading(false);
       }
     }
     fetchItems();
@@ -48,6 +51,10 @@ export default function Home() {
     return cart.reduce((total, item) =>
       total + item.price * item.qty
       , 0)
+  }
+
+  if (loading) {
+    return <div className={styles.loader}></div>
   }
 
   return (

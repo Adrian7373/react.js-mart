@@ -61,3 +61,8 @@
 .checkoutButton:hover {
     background-color: #f76c50;
 }
+
+.emptyCart {
+    text-align: center;
+    font-size: 30px;
+}

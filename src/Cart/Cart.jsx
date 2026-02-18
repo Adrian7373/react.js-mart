@@ -6,9 +6,9 @@ export default function Cart({ cartItems, onUpdateQty, total }) {
             <h2>Your Cart</h2>
             {cartItems.length === 0
                 ? (
-                    <p>Your cart is empty</p>
+                    <p className={styles.emptyCart}>Your cart is empty</p>
                 )
-                : (
+                : (<>
                     <div className={styles.itemList}>
                         {cartItems.map((item) => (
                             <div className={styles.cartItem} key={item.id}>
@@ -30,11 +30,11 @@ export default function Cart({ cartItems, onUpdateQty, total }) {
 
                     </div>
 
-                )}
-            <div className={styles.footer}>
-                <h3>Total: ${total.toFixed(2)}</h3>
-                <button className={styles.checkoutButton}>Checkout</button>
-            </div>
+                    <div className={styles.footer}>
+                        <h3>Total: ${total.toFixed(2)}</h3>
+                        <button className={styles.checkoutButton}>Checkout</button>
+                    </div>
+                </>)}
 
         </div>
     )
