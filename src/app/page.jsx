@@ -7,8 +7,21 @@ import styles from "./page.module.css";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [cart, setCart] = useState(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("my-cart");
+      if (saved) {
+        return JSON.parse(saved);
+      }
+    }
+    return [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("my-cart", JSON.stringify(cart));
+  }, [cart]);
+
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -24,6 +37,7 @@ export default function Home() {
     }
     fetchItems();
   }, []);
+
 
   const addToCart = (item) => {
     setCart((prevCart) => {
